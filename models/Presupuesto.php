@@ -16,6 +16,7 @@ use Yii;
  */
 class Presupuesto extends \yii\db\ActiveRecord
 {
+
     /**
      * @inheritdoc
      */
@@ -44,7 +45,6 @@ class Presupuesto extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            
             'cod_pre' => 'Código',
             'id_prov' => 'Proveedor',
             'fec_pre' => 'Fecha',
@@ -61,4 +61,10 @@ class Presupuesto extends \yii\db\ActiveRecord
     {
         return new PresupuestoQuery(get_called_class());
     }
+
+    public function GetProveedors()
+    {
+        return $this->hasOne(Proveedor::className(), ['id_prov' => 'id_prov']);
+    }
+
 }

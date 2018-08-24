@@ -4,8 +4,51 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "79c7fe8b7f6e3606b8afe3aa75f2e8e7",
+    "content-hash": "53eb97b7147950db766cf6d90bfab7ca",
     "packages": [
+        {
+            "name": "3ch3r46/bootui-datepicker",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/3ch3r46/bootui-datepicker.git",
+                "reference": "f04fe2dfbed787340fe8b833d022c02e1fa607cb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/3ch3r46/bootui-datepicker/get/f04fe2dfbed787340fe8b833d022c02e1fa607cb.zip",
+                "reference": "f04fe2dfbed787340fe8b833d022c02e1fa607cb",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*",
+                "yiisoft/yii2-bootstrap": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "bootui\\datepicker\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Moh Khoirul Anam",
+                    "email": "3ch3r46@gmail.com"
+                }
+            ],
+            "description": "The Bootstrap Datepicker extension for yii framework",
+            "keywords": [
+                "date",
+                "datepicker",
+                "extension",
+                "yii2"
+            ],
+            "time": "2014-05-28T06:58:48+00:00"
+        },
         {
             "name": "bower-asset/bootstrap",
             "version": "v3.3.7",
