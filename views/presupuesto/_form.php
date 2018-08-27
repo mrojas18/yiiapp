@@ -3,9 +3,11 @@
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 use yii\widgets\ActiveForm;
+
 use app\models\Proveedor;
 use bootui\datepicker\Datepicker;
 use yii\bootstrap\Button
+
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Presupuesto */
@@ -17,6 +19,7 @@ use yii\bootstrap\Button
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'cod_pre')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'id_prov')->dropDownList(ArrayHelper::map(Proveedor::find()->all(), 'id_prov', 'nom_prov')); ?>
     <?=
     $form->field($model, 'fec_pre')->widget(Datepicker::className(), [
@@ -30,6 +33,7 @@ use yii\bootstrap\Button
         ],
     ]);
     ?>
+
     <?= $form->field($model, 'vencimiento')->textInput() ?>
 
 
