@@ -1,8 +1,13 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\ArrayHelper;
 use yii\widgets\ActiveForm;
-use yii\jui\DatePicker;
+
+use app\models\Proveedor;
+use bootui\datepicker\Datepicker;
+use yii\bootstrap\Button
+
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Presupuesto */
@@ -15,9 +20,19 @@ use yii\jui\DatePicker;
 
     <?= $form->field($model, 'cod_pre')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'id_prov')->textInput() ?>
-
-    <?= $form->field($model, 'fec_pre')->widget(DatePicker::className(), ['clientOptions' => ['defaultDate' => '2014-01-01']]) ?>
+    <?= $form->field($model, 'id_prov')->dropDownList(ArrayHelper::map(Proveedor::find()->all(), 'id_prov', 'nom_prov')); ?>
+    <?=
+    $form->field($model, 'fec_pre')->widget(Datepicker::className(), [
+        'format' => 'dd-mm-yyyy',
+        'addon' => [
+        //'prepend' => [Html::a('Fecha', '#', ['class' => 'btn btn-primary']), true], // prepend in single button, format [String $content, Boolean $asButton]
+        //'append' => [// append in multiple button.
+        //  [Button::widget(['label' => 'Action', 'options' => ['class' => 'btn-primary'], ]), true],
+        //[bootui\Button::className(), ['label' => 'btn 3'], true], // format [$className, Array $config, Boolean $asButton]
+        // ]
+        ],
+    ]);
+    ?>
 
     <?= $form->field($model, 'vencimiento')->textInput() ?>
 
